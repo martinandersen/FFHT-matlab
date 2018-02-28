@@ -32,7 +32,7 @@ patch:
 		sed -i 's/inline/static inline/g' gen.py
 endif
 
-ffht.$(ext): ffht.c FFHT/fht.o patch
+ffht.$(ext): ffht.c patch FFHT/fht.o
 	$(MEX) $(MEXFLAGS) $(LDLIBS) $<
 
 clean:
